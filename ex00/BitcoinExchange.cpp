@@ -16,7 +16,7 @@ void BitcoinExchange::fillData()
     }
 
     std::string line;
-    std::getline(file, line); // skip header
+    std::getline(file, line);
 
     while (std::getline(file, line))
     {
@@ -57,6 +57,5 @@ void BitcoinExchange::convert(std::string const &date, float const amount)
         --it;
     }
 
-    std::cout << date << " => " << amount << " = "
-              << amount * it->second << std::endl;
+    std::cout << date << " => " << amount << " = " << amount * it->second << std::endl;
 }
